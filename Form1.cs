@@ -20,6 +20,8 @@ namespace Battle_Ship
         public int[,] myMap = new int[mapSize, mapSize];
         public int[,] enemyMap = new int[mapSize, mapSize];
 
+        public bool isPlaying = false;
+
         public Form1()
         {
             InitializeComponent();
@@ -28,6 +30,7 @@ namespace Battle_Ship
         }
         public void Init()
         {
+            isPlaying = false; 
             CreateMap();
         }
         public void CreateMap()
@@ -44,16 +47,20 @@ namespace Battle_Ship
                     Button button = new Button();
                     button.Location = new Point(23+j * cellSize, 23 + i * cellSize);
                     button.Size = new Size(cellSize, cellSize);
+                    button.BackColor = Color.White;
                     if (j == 0 || i == 0)
                     {
 
                         button.BackColor = Color.Gray;
-                        if (i == 0 && j!=0 )
+                        if (i == 0 && j != 0)
                         {
-                            button.Text = alphabet[j-1].ToString();
+                            button.Text = alphabet[j - 1].ToString();
                         }
-                        if(j==0 && i!=0)
+                        if (j == 0 && i != 0)
                             button.Text = i.ToString();
+                    }else
+                    {
+                        button.Click += new EventHandler(ConfigureShips);
                     }
                     this.Controls.Add(button);
                 }
@@ -72,6 +79,7 @@ namespace Battle_Ship
                     Button button = new Button();
                     button.Location = new Point(400 + j * cellSize, 23+i * cellSize);
                     button.Size = new Size(cellSize, cellSize);
+                    button.BackColor = Color.White;
                     if (j == 0 || i == 0)
                     {
 
@@ -94,8 +102,30 @@ namespace Battle_Ship
 
             Button startButton = new Button();
             startButton.Text = "START";
+            startButton.Click += new EventHandler(Start);
             startButton.Location = new Point(this.Width/2-45, mapSize*cellSize + 30);
             this.Controls.Add(startButton);
+        }
+        public void Start(object sender, EventArgs e)
+        {
+            isPlaying = true;
+
+        }
+        public void ConfigureShips (object sender, EventArgs e)
+        {
+            Button pressedButton = sender as Button;
+            if (!isPlaying)
+            {
+                if (myMap[pressedButton.Location.Y / cellSize, pressedButton.Location.X / cellSize] == 0)
+                {
+                    pressedButton.BackColor = Color.Red;
+                    myMap[pressedButton.Location.Y / cellSize, pressedButton.Location.X / cellSize] = 1;
+                }else
+                {
+                    pressedButton.BackColor = Color.White;
+                    myMap[pressedButton.Location.Y / cellSize, pressedButton.Location.X / cellSize] = 0;
+                }
+            }
         }
     }
 }
