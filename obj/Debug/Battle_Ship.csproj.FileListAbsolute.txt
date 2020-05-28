@@ -1,0 +1,9 @@
+E:\Visual Studio saves\Battle_Shiiiiiiiiiiiiiiiiit\Battle_Ship\bin\Debug\Battle_Ship.exe.config
+E:\Visual Studio saves\Battle_Shiiiiiiiiiiiiiiiiit\Battle_Ship\bin\Debug\Battle_Ship.exe
+E:\Visual Studio saves\Battle_Shiiiiiiiiiiiiiiiiit\Battle_Ship\bin\Debug\Battle_Ship.pdb
+E:\Visual Studio saves\Battle_Shiiiiiiiiiiiiiiiiit\Battle_Ship\obj\Debug\Battle_Ship.csprojAssemblyReference.cache
+E:\Visual Studio saves\Battle_Shiiiiiiiiiiiiiiiiit\Battle_Ship\obj\Debug\Battle_Ship.Form1.resources
+E:\Visual Studio saves\Battle_Shiiiiiiiiiiiiiiiiit\Battle_Ship\obj\Debug\Battle_Ship.Properties.Resources.resources
+E:\Visual Studio saves\Battle_Shiiiiiiiiiiiiiiiiit\Battle_Ship\obj\Debug\Battle_Ship.csproj.GenerateResource.cache
+E:\Visual Studio saves\Battle_Shiiiiiiiiiiiiiiiiit\Battle_Ship\obj\Debug\Battle_Ship.exe
+E:\Visual Studio saves\Battle_Shiiiiiiiiiiiiiiiiit\Battle_Ship\obj\Debug\Battle_Ship.pdb
