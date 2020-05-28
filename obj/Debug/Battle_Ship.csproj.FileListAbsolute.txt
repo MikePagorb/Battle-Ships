@@ -7,3 +7,12 @@ E:\Visual Studio saves\Battle_Shiiiiiiiiiiiiiiiiit\Battle_Ship\obj\Debug\Battle_
 E:\Visual Studio saves\Battle_Shiiiiiiiiiiiiiiiiit\Battle_Ship\obj\Debug\Battle_Ship.csproj.GenerateResource.cache
 E:\Visual Studio saves\Battle_Shiiiiiiiiiiiiiiiiit\Battle_Ship\obj\Debug\Battle_Ship.exe
 E:\Visual Studio saves\Battle_Shiiiiiiiiiiiiiiiiit\Battle_Ship\obj\Debug\Battle_Ship.pdb
+E:\GitHub\Works\Battle-Ships\bin\Debug\Battle_Ship.exe.config
+E:\GitHub\Works\Battle-Ships\bin\Debug\Battle_Ship.exe
+E:\GitHub\Works\Battle-Ships\bin\Debug\Battle_Ship.pdb
+E:\GitHub\Works\Battle-Ships\obj\Debug\Battle_Ship.csprojAssemblyReference.cache
+E:\GitHub\Works\Battle-Ships\obj\Debug\Battle_Ship.Form1.resources
+E:\GitHub\Works\Battle-Ships\obj\Debug\Battle_Ship.Properties.Resources.resources
+E:\GitHub\Works\Battle-Ships\obj\Debug\Battle_Ship.csproj.GenerateResource.cache
+E:\GitHub\Works\Battle-Ships\obj\Debug\Battle_Ship.exe
+E:\GitHub\Works\Battle-Ships\obj\Debug\Battle_Ship.pdb

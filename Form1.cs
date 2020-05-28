@@ -15,7 +15,7 @@ namespace Battle_Ship
         public const int mapSize = 11;
         public int cellSize = 30;
         public string alphabet = "РЕСПУБЛИКА";
-
+        
 
         public int[,] myMap = new int[mapSize, mapSize];
         public int[,] enemyMap = new int[mapSize, mapSize];
@@ -94,7 +94,8 @@ namespace Battle_Ship
 
             Button startButton = new Button();
             startButton.Text = "START";
-            startButton.Location = new Point(1000, 0);
+            startButton.Location = new Point(this.Width/2-45, mapSize*cellSize + 30);
+            this.Controls.Add(startButton);
         }
     }
 }
