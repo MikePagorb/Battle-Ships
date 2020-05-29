@@ -23,7 +23,8 @@ namespace Battle_Ship
        
 
         public Form1()
-        {  this.BackgroundImage = Image.FromFile(@"C:\Users\38096\Downloads\Telegram Desktop\Михайло Холмогоров\BattleShip\Battle_Ship\images\images_5.jpg");
+        {       
+            this.BackgroundImage = Image.FromFile(@"..\..\images\images_5.jpg");
             BackgroundImageLayout = ImageLayout.Stretch;
             InitializeComponent();
             this.Text = "Battle ship";
@@ -73,9 +74,11 @@ namespace Battle_Ship
 
             Label map1 = new Label();
             map1.BackColor = Color.Transparent;
-            map1.Text = "Карта игрока";
+            map1.Text = "Player Map";
+            map1.Size = new Size(6*cellSize, 30);
             map1.ForeColor = Color.Green;
-            map1.Location=new Point(mapSize*cellSize/2,0);
+            map1.Font = new Font("Ravie", 12);
+            map1.Location=new Point(mapSize*cellSize/2-40,0);
             this.Controls.Add(map1);
 
             for (int i = 0; i < mapSize; i++)
@@ -109,11 +112,13 @@ namespace Battle_Ship
             }
             Label map2 = new Label();
             map2.BackColor = Color.Transparent;
-            map2.Text = "Карта противника";
+            map2.Text = "Enemy Map";
             map2.ForeColor = Color.DarkRed;
+            map2.Font = new Font("Ravie", 12);
+            map2.Size = new Size(6 * cellSize, 30);
             map2.Location = new Point(360+mapSize * cellSize / 2, 0);
             this.Controls.Add(map2);
-
+            
             Button startButton = new Button();
             startButton.Text = "START";
             startButton.Click += new EventHandler(Start);
