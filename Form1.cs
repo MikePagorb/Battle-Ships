@@ -15,16 +15,18 @@ namespace Battle_Ship
     {
         public const int mapSize = 11;
         public const int cellSize = 30;
-        public string alphabet = "РЕСПУБЛИКАА";
+        public string alphabet = "РЕСПУБЛИКА";
         public int[,] myMap = new int[mapSize, mapSize];
         public int[,] enemyMap = new int[mapSize, mapSize];
         public bool isPlaying = false;
 
-       
+        public Button[,] myButtons = new Button[mapSize, mapSize];
+        public Button[,] enemyButtons = new Button[mapSize, mapSize];
+
 
         public Form1()
         {       
-            this.BackgroundImage = Image.FromFile(@"..\..\images\images_5.jpg");
+            this.BackgroundImage = Image.FromFile(@"..\..\images\images_3.jpg");
             BackgroundImageLayout = ImageLayout.Stretch;
             InitializeComponent();
             this.Text = "Battle ship";
@@ -39,7 +41,6 @@ namespace Battle_Ship
         {
             this.Width = (mapSize+1) * 2 * cellSize + 50;
             this.Height = (mapSize+2) * cellSize+45;
-
             for (int i = 0; i < mapSize; i++)
             {
                 for (int j = 0; j < mapSize; j++)
@@ -47,10 +48,12 @@ namespace Battle_Ship
                     myMap[i, j] = 0;
 
                     Button button = new Button();
-                    button.Location = new Point(23+j * cellSize, 23+i * cellSize);
+                    button.Location = new Point(23+j * cellSize, 25+i * cellSize);
                     button.Size = new Size(cellSize, cellSize);
                     button.BackColor = Color.White;
+                    button.Font = new Font("Ravie", 8);
                     button.ForeColor = Color.Azure;
+
 
                     if (j==0 || i==0)
                     {
@@ -68,6 +71,7 @@ namespace Battle_Ship
                     { 
                         button.Click += new EventHandler(ConfigureShips);
                     }
+                    myButtons[i, j] = button;
                     this.Controls.Add(button);
                 }
             }
@@ -75,9 +79,9 @@ namespace Battle_Ship
             Label map1 = new Label();
             map1.BackColor = Color.Transparent;
             map1.Text = "Player Map";
-            map1.Size = new Size(6*cellSize, 30);
-            map1.ForeColor = Color.Green;
-            map1.Font = new Font("Ravie", 12);
+            map1.Size = new Size(5*cellSize, 30);
+            map1.ForeColor = Color.ForestGreen;
+            map1.Font = new Font("Ravie", 13);
             map1.Location=new Point(mapSize*cellSize/2-40,0);
             this.Controls.Add(map1);
 
@@ -89,10 +93,10 @@ namespace Battle_Ship
                     enemyMap[i, j] = 0;
 
                     Button button = new Button();
-                    button.Location = new Point(400+j * cellSize, 23+i * cellSize);
+                    button.Location = new Point(400+j * cellSize, 25+i * cellSize);
                     button.Size = new Size(cellSize, cellSize);
                     button.BackColor = Color.White;
-                    //button.BackColor = Color.Transparent;
+                    button.Font = new Font("Ravie", 8);
                     button.ForeColor = Color.Azure;
 
                     if (j == 0 || i == 0)
@@ -107,22 +111,29 @@ namespace Battle_Ship
                             button.Text = i.ToString();
                         }
                     }
+                    else
+                    {
+                        button.Click += new EventHandler(PlayerShoot);
+                    }
+                    enemyButtons[i, j] = button;
                     this.Controls.Add(button);
                 }
             }
             Label map2 = new Label();
             map2.BackColor = Color.Transparent;
             map2.Text = "Enemy Map";
-            map2.ForeColor = Color.DarkRed;
-            map2.Font = new Font("Ravie", 12);
-            map2.Size = new Size(6 * cellSize, 30);
-            map2.Location = new Point(360+mapSize * cellSize / 2, 0);
+            map2.ForeColor = Color.Red;
+            map2.Font = new Font("Ravie", 13);
+            map2.Size = new Size(5 * cellSize, 30);
+            map2.Location = new Point(340+mapSize * cellSize / 2, 0);
             this.Controls.Add(map2);
             
             Button startButton = new Button();
-            startButton.Text = "START";
+            startButton.Text = "Start";
             startButton.Click += new EventHandler(Start);
-            startButton.Location = new Point((this.Width/2)-45,mapSize*cellSize+30);
+            startButton.Location = new Point((this.Width/2)- 80,mapSize*cellSize+30);
+            startButton.Font = new Font("Ravie", 13);
+            startButton.Size = new Size(5 * cellSize, 30);
             this.Controls.Add(startButton);
         }
         public void Start(object sender,EventArgs e)
@@ -145,6 +156,35 @@ namespace Battle_Ship
                     myMap[pressedButton.Location.Y / cellSize, pressedButton.Location.X / cellSize] = 0;
                 }
             }
+        }
+        public void PlayerShoot(object sender, EventArgs e)
+        {
+            Button pressedButton = sender as Button;
+            Shoot(enemyMap, pressedButton);
+        }
+
+        public bool Shoot(int[,] map, Button pressedButton)
+        {
+            bool hit = false;
+            if (isPlaying)
+            {
+                int delta = 0;
+                if (pressedButton.Location.X > 400)
+                    delta = 400;
+                if (map[pressedButton.Location.Y / cellSize, (pressedButton.Location.X-400) / cellSize] != 0)
+                {
+                    hit = true;
+
+                    pressedButton.BackColor = Color.Red;
+                    pressedButton.Text = "X";
+                    pressedButton.ForeColor = Color.Black;
+                }
+                else 
+                {
+                    pressedButton.BackColor = Color.DarkGray;
+                }
+            }
+            return hit;
         }
     } 
 }
