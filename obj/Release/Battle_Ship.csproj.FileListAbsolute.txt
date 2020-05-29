@@ -1,0 +1,9 @@
+C:\Users\38096\Downloads\Telegram Desktop\Михайло Холмогоров\BattleShip\Battle_Ship\bin\Release\Battle_Ship.exe.config
+C:\Users\38096\Downloads\Telegram Desktop\Михайло Холмогоров\BattleShip\Battle_Ship\bin\Release\Battle_Ship.exe
+C:\Users\38096\Downloads\Telegram Desktop\Михайло Холмогоров\BattleShip\Battle_Ship\bin\Release\Battle_Ship.pdb
+C:\Users\38096\Downloads\Telegram Desktop\Михайло Холмогоров\BattleShip\Battle_Ship\obj\Release\Battle_Ship.csprojAssemblyReference.cache
+C:\Users\38096\Downloads\Telegram Desktop\Михайло Холмогоров\BattleShip\Battle_Ship\obj\Release\Battle_Ship.Properties.Resources.resources
+C:\Users\38096\Downloads\Telegram Desktop\Михайло Холмогоров\BattleShip\Battle_Ship\obj\Release\Battle_Ship.csproj.GenerateResource.cache
+C:\Users\38096\Downloads\Telegram Desktop\Михайло Холмогоров\BattleShip\Battle_Ship\obj\Release\Battle_Ship.csproj.CoreCompileInputs.cache
+C:\Users\38096\Downloads\Telegram Desktop\Михайло Холмогоров\BattleShip\Battle_Ship\obj\Release\Battle_Ship.exe
+C:\Users\38096\Downloads\Telegram Desktop\Михайло Холмогоров\BattleShip\Battle_Ship\obj\Release\Battle_Ship.pdb
