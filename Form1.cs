@@ -171,7 +171,7 @@ namespace Battle_Ship
                 int delta = 0;
                 if (pressedButton.Location.X > 400)
                     delta = 400;
-                if (map[pressedButton.Location.Y / cellSize, (pressedButton.Location.X-400) / cellSize] != 0)
+                if (map[pressedButton.Location.Y / cellSize, (pressedButton.Location.X-delta) / cellSize] != 0)
                 {
                     hit = true;
 
