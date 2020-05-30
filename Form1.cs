@@ -17,11 +17,11 @@ namespace Battle_Ship
         public const int cellSize = 30;
         public string alphabet = "РЕСПУБЛИКА";
 
-        public int[,] myMap = new int[mapSize, mapSize];
-        public int[,] enemyMap = new int[mapSize, mapSize];
+        private int[,] _myMap = new int[mapSize, mapSize];
+        private int[,] _enemyMap = new int[mapSize, mapSize];
 
-        public Button[,] myButtons = new Button[mapSize, mapSize];
-        public Button[,] enemyButtons = new Button[mapSize, mapSize];
+        private Button[,] _myButtons = new Button[mapSize, mapSize];
+        private Button[,] _enemyButtons = new Button[mapSize, mapSize];
 
         public bool isPlaying = false;
 
@@ -39,8 +39,8 @@ namespace Battle_Ship
         {
             isPlaying = false;
             CreateMap();
-            bot = new Bot(enemyMap, myMap, enemyButtons, myButtons);
-            enemyMap = bot.ConfigureShips();
+            bot = new Bot(_enemyMap, _myMap, _enemyButtons, _myButtons);
+            _enemyMap = bot.ConfigureShips();
         }
         public void CreateMap()
         {
@@ -50,7 +50,7 @@ namespace Battle_Ship
             {
                 for (int j = 0; j < mapSize; j++)
                 {
-                    myMap[i, j] = 0;
+                    _myMap[i, j] = 0;
 
                     Button button = new Button();
                     button.Location = new Point(23+j * cellSize, 25+i * cellSize);
@@ -76,7 +76,7 @@ namespace Battle_Ship
                     { 
                         button.Click += new EventHandler(ConfigureShips);
                     }
-                    myButtons[i, j] = button;
+                    _myButtons[i, j] = button;
                     this.Controls.Add(button);
                 }
             }
@@ -85,8 +85,8 @@ namespace Battle_Ship
             {
                 for (int j = 0; j < mapSize; j++)
                 {
-                    myMap[i, j] = 0;
-                    enemyMap[i, j] = 0;
+                    _myMap[i, j] = 0;
+                    _enemyMap[i, j] = 0;
 
                     Button button = new Button();
                     button.Location = new Point(400+j * cellSize, 25+i * cellSize);
@@ -111,7 +111,7 @@ namespace Battle_Ship
                     {
                         button.Click += new EventHandler(PlayerShoot);
                     }
-                    enemyButtons[i, j] = button;
+                    _enemyButtons[i, j] = button;
                     this.Controls.Add(button);
                 }
             }
@@ -154,12 +154,13 @@ namespace Battle_Ship
             {
                 for (int j = 1; j < mapSize; j++)
                 {
-                    if (myMap[i, j] != 0)
+                    if (_myMap[i, j] != 0)
                         isEmpty1 = false;
-                    if (enemyMap[i, j] != 0)
+                    if (_enemyMap[i, j] != 0)
                         isEmpty2 = false;
                 }
             }
+
             if (isEmpty1 || isEmpty2)
                 return false;
             else return true;
@@ -170,22 +171,22 @@ namespace Battle_Ship
             Button pressedButton = sender as Button;
             if (!isPlaying)
             {
-                if (myMap[pressedButton.Location.Y / cellSize, pressedButton.Location.X / cellSize] == 0)
+                if (_myMap[pressedButton.Location.Y / cellSize, pressedButton.Location.X / cellSize] == 0)
                 {
                     pressedButton.BackColor = Color.Green;
-                    myMap[pressedButton.Location.Y / cellSize, pressedButton.Location.X / cellSize] = 1;
+                    _myMap[pressedButton.Location.Y / cellSize, pressedButton.Location.X / cellSize] = 1;
                 }
                 else
                 {
                     pressedButton.BackColor = Color.White;
-                    myMap[pressedButton.Location.Y / cellSize, pressedButton.Location.X / cellSize] = 0;
+                    _myMap[pressedButton.Location.Y / cellSize, pressedButton.Location.X / cellSize] = 0;
                 }
             }
         }
         public void PlayerShoot(object sender, EventArgs e)
         {
             Button pressedButton = sender as Button;
-            bool playerTurn = Shoot(enemyMap, pressedButton);
+            bool playerTurn = Shoot(_enemyMap, pressedButton);
             if (!playerTurn)
                 bot.Shoot();
 
