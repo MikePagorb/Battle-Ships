@@ -16,13 +16,16 @@ namespace Battle_Ship
         public const int mapSize = 11;
         public const int cellSize = 30;
         public string alphabet = "РЕСПУБЛИКА";
+
         public int[,] myMap = new int[mapSize, mapSize];
         public int[,] enemyMap = new int[mapSize, mapSize];
-        public bool isPlaying = false;
 
         public Button[,] myButtons = new Button[mapSize, mapSize];
         public Button[,] enemyButtons = new Button[mapSize, mapSize];
 
+        public bool isPlaying = false;
+
+        public Bot bot;
 
         public Form1()
         {       
@@ -36,6 +39,8 @@ namespace Battle_Ship
         {
             isPlaying = false;
             CreateMap();
+            bot = new Bot(enemyMap, myMap, enemyButtons, myButtons);
+            enemyMap = bot.ConfigureShips();
         }
         public void CreateMap()
         {
@@ -76,15 +81,6 @@ namespace Battle_Ship
                 }
             }
 
-            Label map1 = new Label();
-            map1.BackColor = Color.Transparent;
-            map1.Text = "Player Map";
-            map1.Size = new Size(5*cellSize, 30);
-            map1.ForeColor = Color.ForestGreen;
-            map1.Font = new Font("Ravie", 13);
-            map1.Location=new Point(mapSize*cellSize/2-40,0);
-            this.Controls.Add(map1);
-
             for (int i = 0; i < mapSize; i++)
             {
                 for (int j = 0; j < mapSize; j++)
@@ -119,6 +115,15 @@ namespace Battle_Ship
                     this.Controls.Add(button);
                 }
             }
+            Label map1 = new Label();
+            map1.BackColor = Color.Transparent;
+            map1.Text = "Player Map";
+            map1.Size = new Size(5 * cellSize, 30);
+            map1.ForeColor = Color.ForestGreen;
+            map1.Font = new Font("Ravie", 13);
+            map1.Location = new Point(mapSize * cellSize / 2 - 40, 0);
+            this.Controls.Add(map1);
+
             Label map2 = new Label();
             map2.BackColor = Color.Transparent;
             map2.Text = "Enemy Map";
@@ -140,6 +145,26 @@ namespace Battle_Ship
         {
             isPlaying = true;
         }
+
+        public bool CheckIfMapIsNotEmpty()
+        {
+            bool isEmpty1 = true;
+            bool isEmpty2 = true;
+            for (int i = 1; i < mapSize; i++)
+            {
+                for (int j = 1; j < mapSize; j++)
+                {
+                    if (myMap[i, j] != 0)
+                        isEmpty1 = false;
+                    if (enemyMap[i, j] != 0)
+                        isEmpty2 = false;
+                }
+            }
+            if (isEmpty1 || isEmpty2)
+                return false;
+            else return true;
+        }
+
         public void ConfigureShips(object sender, EventArgs e)
         {
             Button pressedButton = sender as Button;
@@ -160,7 +185,15 @@ namespace Battle_Ship
         public void PlayerShoot(object sender, EventArgs e)
         {
             Button pressedButton = sender as Button;
-            Shoot(enemyMap, pressedButton);
+            bool playerTurn = Shoot(enemyMap, pressedButton);
+            if (!playerTurn)
+                bot.Shoot();
+
+            if (!CheckIfMapIsNotEmpty())
+            {
+                this.Controls.Clear();
+                Init();
+            }
         }
 
         public bool Shoot(int[,] map, Button pressedButton)
