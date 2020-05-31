@@ -42,6 +42,13 @@ namespace Battle_Ship
             bot = new Bot(_enemyMap, _myMap, _enemyButtons, _myButtons);
             _enemyMap = bot.ConfigureShips();
         }
+        public void InitRestart()
+        {
+            isPlaying = false;
+            ReStart(ref _myButtons, ref _enemyButtons, ref _myMap, ref _enemyMap);
+            bot = new Bot(_enemyMap, _myMap, _enemyButtons, _myButtons);
+            _enemyMap = bot.ConfigureShips();
+        }
         public void CreateMap()
         {
             this.Width = (mapSize+1) * 2 * cellSize + 50;
@@ -53,7 +60,7 @@ namespace Battle_Ship
                     _myMap[i, j] = 0;
 
                     Button button = new Button();
-                    button.Location = new Point(23+j * cellSize, 25+i * cellSize);
+                    button.Location = new Point(23 + j * cellSize, 25 + i * cellSize);
                     button.Size = new Size(cellSize, cellSize);
                     button.BackColor = Color.White;
                     button.Font = new Font("Ravie", 8);
@@ -143,28 +150,67 @@ namespace Battle_Ship
         }
         public void Start(object sender,EventArgs e)
         {
-            isPlaying = true;
+            if (CheckIfMyMapIsNotEmpty())
+                isPlaying = true;
+            else
+                MessageBox.Show("Please, place your ships");
         }
 
-        public bool CheckIfMapIsNotEmpty()
+        public void ReStart (ref Button[,] myButton, ref Button[,] enemyButton, ref int[,] myMap,ref int [,] enemyMap)
         {
-            bool isEmpty1 = true;
-            bool isEmpty2 = true;
+            for (int i = 1; i < 11; i++)
+            {
+                for (int j = 1; j < 11; j++) 
+                {
+
+                    myButton[i, j].BackColor = Color.White;
+                    myButton[i, j].Text = "";
+                    enemyButton[i, j].BackColor = Color.White;
+                    enemyButton[i, j].Text = "";
+                    myMap[i, j] = 0;
+                    enemyMap[i, j] = 0;
+                }
+            }
+        }
+
+        public bool CheckIfMyMapIsNotEmpty()
+        {
+            bool isEmpty = true;
             for (int i = 1; i < mapSize; i++)
             {
                 for (int j = 1; j < mapSize; j++)
                 {
                     if (_myMap[i, j] != 0)
-                        isEmpty1 = false;
-                    if (_enemyMap[i, j] != 0)
-                        isEmpty2 = false;
+                        isEmpty = false;
+
                 }
             }
-
-            if (isEmpty1 || isEmpty2)
+            if (isEmpty)
                 return false;
             else return true;
         }
+        public bool CheckIfEnemyMapIsNotEmpty()
+        {
+            bool isEmpty = true;
+            for (int i = 1; i < mapSize; i++)
+            {
+                for (int j = 1; j < mapSize; j++)
+                {
+                    if (_enemyMap[i, j] != 0)
+                        isEmpty = false;
+
+                }
+            }
+            if (isEmpty)
+                return false;
+            else return true;
+        }
+        //public bool CheckIfMapIsNotEmpty()
+        //{
+        //    if (CheckIfMyMapIsNotEmpty() || CheckIfEnemyMapIsNotEmpty())
+        //        return false;
+        //    else return true;
+        //}
 
         public void ConfigureShips(object sender, EventArgs e)
         {
@@ -186,18 +232,25 @@ namespace Battle_Ship
         public void PlayerShoot(object sender, EventArgs e)
         {
             Button pressedButton = sender as Button;
-            bool playerTurn = Shoot(_enemyMap, pressedButton);
+            bool playerTurn = Shoot(ref _enemyMap, pressedButton);
             if (!playerTurn)
                 bot.Shoot();
 
-            if (!CheckIfMapIsNotEmpty())
+            if (!CheckIfMyMapIsNotEmpty())
             {
-                this.Controls.Clear();
-                Init();
+                MessageBox.Show("You lose!");
+                //this.Controls.Clear();
+                InitRestart();
+            }
+            else if (!CheckIfEnemyMapIsNotEmpty())
+            {
+                MessageBox.Show("You Win!");
+                //this.Controls.Clear();
+                InitRestart();
             }
         }
 
-        public bool Shoot(int[,] map, Button pressedButton)
+        public bool Shoot(ref int[,] map, Button pressedButton)
         {
             bool hit = false;
             if (isPlaying)
@@ -212,9 +265,11 @@ namespace Battle_Ship
                     pressedButton.BackColor = Color.Red;
                     pressedButton.Text = "X";
                     pressedButton.ForeColor = Color.Black;
+                    map[pressedButton.Location.Y / cellSize, (pressedButton.Location.X - delta) / cellSize] = 0;
                 }
-                else 
+                else if(pressedButton.BackColor != Color.Red)
                 {
+
                     pressedButton.BackColor = Color.DarkGray;
                 }
             }

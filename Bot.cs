@@ -51,37 +51,97 @@ namespace Battle_Ship
 
         public int[,] ConfigureShips()
         {
-            int lengthShip = 4;
-            int cycleValue = 4;
-            int shipsCount = 10;
-            Random r = new Random();
-
-            int posX = 0;
-            int posY = 0;
-
-            while (shipsCount > 0)
+            int[,] myMap1 =
+             {
+                {0,0,0,0,0,0,0,0,0,0,0 },
+                {0,0,0,0,0,1,1,0,0,0,0 },
+                {0,1,0,0,0,0,0,0,0,0,0 },
+                {0,1,0,0,0,1,1,1,0,0,1 },
+                {0,1,0,0,0,0,0,0,0,0,1 },
+                {0,1,0,0,0,0,0,0,0,0,0 },
+                {0,0,0,0,1,0,0,0,1,0,0 },
+                {0,0,1,0,1,0,0,0,1,0,0 },
+                {0,0,0,0,1,0,0,0,0,0,0 },
+                {0,0,0,0,0,0,1,0,0,0,0 },
+                {0,0,1,0,0,0,0,0,1,0,0 }
+            };
+            int[,] myMap2 =
             {
-                for (int i = 0; i < cycleValue / 4; i++)
-                {
-                    posX = r.Next(0, Form1.mapSize);
-                    posY = r.Next(0, Form1.mapSize);
-
-                    while (!IsInsideMap(posX, posY + lengthShip - 1) || !IsEmpty(posX, posY, lengthShip))
-                    {
-                        posX = r.Next(0, Form1.mapSize);
-                        posY = r.Next(0, Form1.mapSize);
-                    }
-                    for (int k = posY; k < posY + lengthShip; k++)
-                    {
-                        myMap[posX, posY] = 1;
-                    }
-
-                    lengthShip--;
-                    cycleValue *= 2;
-                    shipsCount--;
-                    if (shipsCount <= 0)
-                        break;
-                }
+                {0,0,0,0,0,0,0,0,0,0,0 },
+                {0,0,0,0,0,0,0,0,1,0,0 },
+                {0,0,0,0,0,1,0,0,0,0,1 },
+                {0,0,1,0,0,0,0,0,0,0,0 },
+                {0,0,0,0,0,1,1,0,0,0,1 },
+                {0,0,0,0,0,0,0,0,0,0,1 },
+                {0,0,1,0,0,1,0,0,0,0,1 },
+                {0,0,1,0,0,1,0,0,0,0,1 },
+                {0,0,0,0,0,1,0,0,0,0,0 },
+                {0,0,0,0,0,0,0,0,0,1,0 },
+                {0,0,0,1,1,1,0,0,0,1,0 }
+            };
+            int[,] myMap3 =
+{
+                {0,0,0,0,0,0,0,0,0,0,0 },
+                {0,1,1,1,1,0,1,1,1,0,1 },
+                {0,0,0,0,0,0,0,0,0,0,1 },
+                {0,1,1,0,1,1,0,1,1,0,1 },
+                {0,0,0,0,0,0,0,0,0,0,0 },
+                {0,0,0,0,0,0,0,0,0,0,0 },
+                {0,0,0,0,1,0,0,0,0,0,0 },
+                {0,0,0,0,0,0,0,0,0,1,0 },
+                {0,0,1,0,0,0,0,0,0,0,0 },
+                {0,0,0,0,0,1,0,0,0,0,0 },
+                {0,0,0,0,0,0,0,0,0,0,0 }
+            };
+            int[,] myMap4 =
+{
+                {0,0,0,0,0,0,0,0,0,0,0 },
+                {0,0,0,0,0,0,0,1,0,0,1 },
+                {0,0,0,0,0,1,0,0,0,0,0 },
+                {0,0,0,0,0,1,0,0,0,0,0 },
+                {0,0,1,0,0,1,0,1,1,1,0 },
+                {0,0,1,0,0,1,0,0,0,0,0 },
+                {0,0,0,0,0,0,0,0,0,0,0 },
+                {0,0,1,1,1,0,0,0,1,1,0 },
+                {0,0,0,0,0,0,0,0,0,0,0 },
+                {0,0,0,1,0,0,0,0,1,1,0 },
+                {0,0,0,0,0,1,0,0,0,0,0 }
+            };
+            Random r = new Random();
+            int random = r.Next(1, 20);
+            switch (random)
+            {
+                case 1:
+                case 4:
+                case 7:
+                case 11:
+                case 15:
+                    myMap = myMap2;
+                    break;
+                case 2:
+                case 5:
+                case 8:
+                case 14:
+                case 18:
+                    myMap = myMap1;
+                    break;
+                case 3:
+                case 6: 
+                case 9:
+                case 13:
+                case 17:
+                    myMap = myMap3;
+                    break;
+                case 10:
+                case 12:
+                case 16:
+                case 19:
+                case 20:
+                    myMap = myMap4;
+                    break;
+                default:
+                    MessageBox.Show("Error");
+                    break;
             }
             return myMap;
         }
