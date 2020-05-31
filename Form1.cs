@@ -52,7 +52,7 @@ namespace Battle_Ship
         public void CreateMap()
         {
             this.Width = (mapSize+1) * 2 * cellSize + 50;
-            this.Height = (mapSize+2) * cellSize+45;
+            this.Height = (mapSize+2) * cellSize+ 90;
             for (int i = 0; i < mapSize; i++)
             {
                 for (int j = 0; j < mapSize; j++)
@@ -147,6 +147,14 @@ namespace Battle_Ship
             startButton.Font = new Font("Ravie", 13);
             startButton.Size = new Size(5 * cellSize, 30);
             this.Controls.Add(startButton);
+
+            Button RestartButton = new Button();
+            RestartButton.Text = "Retart";
+            RestartButton.Click += new EventHandler(ReStart);
+            RestartButton.Location = new Point((this.Width / 2) - 80, mapSize * cellSize + 75);
+            RestartButton.Font = new Font("Ravie", 13);
+            RestartButton.Size = new Size(5 * cellSize, 30);
+            this.Controls.Add(RestartButton);
         }
         public void Start(object sender,EventArgs e)
         {
@@ -154,6 +162,11 @@ namespace Battle_Ship
                 isPlaying = true;
             else
                 MessageBox.Show("Please, place your ships");
+        }
+
+        public void ReStart(object sender, EventArgs e)
+        {
+            InitRestart();
         }
 
         public void ReStart (ref Button[,] myButton, ref Button[,] enemyButton, ref int[,] myMap,ref int [,] enemyMap)
@@ -169,6 +182,7 @@ namespace Battle_Ship
                     enemyButton[i, j].Text = "";
                     myMap[i, j] = 0;
                     enemyMap[i, j] = 0;
+                    GC.Collect();
                 }
             }
         }

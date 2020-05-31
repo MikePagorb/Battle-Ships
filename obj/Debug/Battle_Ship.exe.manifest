@@ -55,14 +55,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Battle_Ship.exe" size="99808">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Battle_Ship.exe" size="100320">
       <assemblyIdentity name="Battle_Ship" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>AmTai8Hb71WiwHIODAFDKV/sSQj6lwzF1vJ2xgT8BEs=</dsig:DigestValue>
+        <dsig:DigestValue>9VQGtwcHo1MIutIdsKjgpoq6R/9qFfRMYXBfVajkQlM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
