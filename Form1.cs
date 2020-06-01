@@ -149,7 +149,7 @@ namespace Battle_Ship
             this.Controls.Add(startButton);
 
             Button RestartButton = new Button();
-            RestartButton.Text = "Retart";
+            RestartButton.Text = "Restart";
             RestartButton.Click += new EventHandler(ReStart);
             RestartButton.Location = new Point((this.Width / 2) - 80, mapSize * cellSize + 75);
             RestartButton.Font = new Font("Ravie", 13);

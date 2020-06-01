@@ -21,3 +21,4 @@ E:\GitHub\Works\Battle-Ships\bin\Release\Battle_Ship.application
 E:\GitHub\Works\Battle-Ships\obj\Release\Battle_Ship.TrustInfo.xml
 E:\GitHub\Works\Battle-Ships\obj\Release\Battle_Ship.exe.manifest
 E:\GitHub\Works\Battle-Ships\obj\Release\Battle_Ship.application
+E:\GitHub\Works\Battle-Ships\obj\Release\Battle_Ship.csproj.CoreCompileInputs.cache

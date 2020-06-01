@@ -21,4 +21,4 @@ E:\GitHub\Works\Battle-Ships\obj\Debug\Battle_Ship.exe.manifest
 E:\GitHub\Works\Battle-Ships\obj\Debug\Battle_Ship.application
 E:\GitHub\Works\Battle-Ships\obj\Debug\Battle_Ship.exe
 E:\GitHub\Works\Battle-Ships\obj\Debug\Battle_Ship.pdb
-E:\GitHub\Works\Battle-Ships\obj\Debug\Battle_Ship.csprojAssemblyReference.cache
+E:\GitHub\Works\Battle-Ships\obj\Debug\Battle_Ship.csproj.CoreCompileInputs.cache
