@@ -1,0 +1,17 @@
+E:\Завантаження\BATTLESHIP_GAME_IN_C_WITH_SOURCE_CODE_H1HQMjC\The-Battle-Ship-master\BattleShip.BLL\bin\Debug\BattleShip.BLL.dll
+E:\Завантаження\BATTLESHIP_GAME_IN_C_WITH_SOURCE_CODE_H1HQMjC\The-Battle-Ship-master\BattleShip.BLL\bin\Debug\BattleShip.BLL.pdb
+E:\Завантаження\BATTLESHIP_GAME_IN_C_WITH_SOURCE_CODE_H1HQMjC\The-Battle-Ship-master\BattleShip.BLL\obj\Debug\BattleShip.BLL.csprojAssemblyReference.cache
+E:\Завантаження\BATTLESHIP_GAME_IN_C_WITH_SOURCE_CODE_H1HQMjC\The-Battle-Ship-master\BattleShip.BLL\obj\Debug\BattleShip.BLL.dll
+E:\Завантаження\BATTLESHIP_GAME_IN_C_WITH_SOURCE_CODE_H1HQMjC\The-Battle-Ship-master\BattleShip.BLL\obj\Debug\BattleShip.BLL.pdb
+E:\Завантаження\Battle ships\BATTLESHIP_GAME_IN_C_WITH_SOURCE_CODE_H1HQMjC\The-Battle-Ship-master\BattleShip.BLL\bin\Debug\BattleShip.BLL.dll
+E:\Завантаження\Battle ships\BATTLESHIP_GAME_IN_C_WITH_SOURCE_CODE_H1HQMjC\The-Battle-Ship-master\BattleShip.BLL\bin\Debug\BattleShip.BLL.pdb
+E:\Завантаження\Battle ships\BATTLESHIP_GAME_IN_C_WITH_SOURCE_CODE_H1HQMjC\The-Battle-Ship-master\BattleShip.BLL\obj\Debug\BattleShip.BLL.csprojAssemblyReference.cache
+E:\Завантаження\Battle ships\BATTLESHIP_GAME_IN_C_WITH_SOURCE_CODE_H1HQMjC\The-Battle-Ship-master\BattleShip.BLL\obj\Debug\BattleShip.BLL.csproj.CoreCompileInputs.cache
+E:\Завантаження\Battle ships\BATTLESHIP_GAME_IN_C_WITH_SOURCE_CODE_H1HQMjC\The-Battle-Ship-master\BattleShip.BLL\obj\Debug\BattleShip.BLL.dll
+E:\Завантаження\Battle ships\BATTLESHIP_GAME_IN_C_WITH_SOURCE_CODE_H1HQMjC\The-Battle-Ship-master\BattleShip.BLL\obj\Debug\BattleShip.BLL.pdb
+E:\Visual Studio saves\BATTLESHIP_GAME\The-Battle-Ship-master\BattleShip.BLL\bin\Debug\BattleShip.BLL.dll
+E:\Visual Studio saves\BATTLESHIP_GAME\The-Battle-Ship-master\BattleShip.BLL\bin\Debug\BattleShip.BLL.pdb
+E:\Visual Studio saves\BATTLESHIP_GAME\The-Battle-Ship-master\BattleShip.BLL\obj\Debug\BattleShip.BLL.csprojAssemblyReference.cache
+E:\Visual Studio saves\BATTLESHIP_GAME\The-Battle-Ship-master\BattleShip.BLL\obj\Debug\BattleShip.BLL.csproj.CoreCompileInputs.cache
+E:\Visual Studio saves\BATTLESHIP_GAME\The-Battle-Ship-master\BattleShip.BLL\obj\Debug\BattleShip.BLL.dll
+E:\Visual Studio saves\BATTLESHIP_GAME\The-Battle-Ship-master\BattleShip.BLL\obj\Debug\BattleShip.BLL.pdb

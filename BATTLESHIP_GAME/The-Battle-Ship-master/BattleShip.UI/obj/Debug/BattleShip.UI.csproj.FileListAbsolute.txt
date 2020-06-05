@@ -1,0 +1,29 @@
+E:\Завантаження\BATTLESHIP_GAME_IN_C_WITH_SOURCE_CODE_H1HQMjC\The-Battle-Ship-master\BattleShip.UI\bin\Debug\BattleShip.UI.exe.config
+E:\Завантаження\BATTLESHIP_GAME_IN_C_WITH_SOURCE_CODE_H1HQMjC\The-Battle-Ship-master\BattleShip.UI\bin\Debug\BattleShip.UI.exe
+E:\Завантаження\BATTLESHIP_GAME_IN_C_WITH_SOURCE_CODE_H1HQMjC\The-Battle-Ship-master\BattleShip.UI\bin\Debug\BattleShip.UI.pdb
+E:\Завантаження\BATTLESHIP_GAME_IN_C_WITH_SOURCE_CODE_H1HQMjC\The-Battle-Ship-master\BattleShip.UI\bin\Debug\BattleShip.BLL.dll
+E:\Завантаження\BATTLESHIP_GAME_IN_C_WITH_SOURCE_CODE_H1HQMjC\The-Battle-Ship-master\BattleShip.UI\bin\Debug\BattleShip.BLL.pdb
+E:\Завантаження\BATTLESHIP_GAME_IN_C_WITH_SOURCE_CODE_H1HQMjC\The-Battle-Ship-master\BattleShip.UI\obj\Debug\BattleShip.UI.csprojAssemblyReference.cache
+E:\Завантаження\BATTLESHIP_GAME_IN_C_WITH_SOURCE_CODE_H1HQMjC\The-Battle-Ship-master\BattleShip.UI\obj\Debug\BattleShip.UI.csproj.CopyComplete
+E:\Завантаження\BATTLESHIP_GAME_IN_C_WITH_SOURCE_CODE_H1HQMjC\The-Battle-Ship-master\BattleShip.UI\obj\Debug\BattleShip.UI.exe
+E:\Завантаження\BATTLESHIP_GAME_IN_C_WITH_SOURCE_CODE_H1HQMjC\The-Battle-Ship-master\BattleShip.UI\obj\Debug\BattleShip.UI.pdb
+E:\Завантаження\Battle ships\BATTLESHIP_GAME_IN_C_WITH_SOURCE_CODE_H1HQMjC\The-Battle-Ship-master\BattleShip.UI\bin\Debug\BattleShip.UI.exe.config
+E:\Завантаження\Battle ships\BATTLESHIP_GAME_IN_C_WITH_SOURCE_CODE_H1HQMjC\The-Battle-Ship-master\BattleShip.UI\bin\Debug\BattleShip.UI.exe
+E:\Завантаження\Battle ships\BATTLESHIP_GAME_IN_C_WITH_SOURCE_CODE_H1HQMjC\The-Battle-Ship-master\BattleShip.UI\bin\Debug\BattleShip.UI.pdb
+E:\Завантаження\Battle ships\BATTLESHIP_GAME_IN_C_WITH_SOURCE_CODE_H1HQMjC\The-Battle-Ship-master\BattleShip.UI\bin\Debug\BattleShip.BLL.dll
+E:\Завантаження\Battle ships\BATTLESHIP_GAME_IN_C_WITH_SOURCE_CODE_H1HQMjC\The-Battle-Ship-master\BattleShip.UI\bin\Debug\BattleShip.BLL.pdb
+E:\Завантаження\Battle ships\BATTLESHIP_GAME_IN_C_WITH_SOURCE_CODE_H1HQMjC\The-Battle-Ship-master\BattleShip.UI\obj\Debug\BattleShip.UI.csprojAssemblyReference.cache
+E:\Завантаження\Battle ships\BATTLESHIP_GAME_IN_C_WITH_SOURCE_CODE_H1HQMjC\The-Battle-Ship-master\BattleShip.UI\obj\Debug\BattleShip.UI.csproj.CoreCompileInputs.cache
+E:\Завантаження\Battle ships\BATTLESHIP_GAME_IN_C_WITH_SOURCE_CODE_H1HQMjC\The-Battle-Ship-master\BattleShip.UI\obj\Debug\BattleShip.UI.csproj.CopyComplete
+E:\Завантаження\Battle ships\BATTLESHIP_GAME_IN_C_WITH_SOURCE_CODE_H1HQMjC\The-Battle-Ship-master\BattleShip.UI\obj\Debug\BattleShip.UI.exe
+E:\Завантаження\Battle ships\BATTLESHIP_GAME_IN_C_WITH_SOURCE_CODE_H1HQMjC\The-Battle-Ship-master\BattleShip.UI\obj\Debug\BattleShip.UI.pdb
+E:\Visual Studio saves\BATTLESHIP_GAME\The-Battle-Ship-master\BattleShip.UI\bin\Debug\BattleShip.UI.exe.config
+E:\Visual Studio saves\BATTLESHIP_GAME\The-Battle-Ship-master\BattleShip.UI\bin\Debug\BattleShip.UI.exe
+E:\Visual Studio saves\BATTLESHIP_GAME\The-Battle-Ship-master\BattleShip.UI\bin\Debug\BattleShip.UI.pdb
+E:\Visual Studio saves\BATTLESHIP_GAME\The-Battle-Ship-master\BattleShip.UI\bin\Debug\BattleShip.BLL.dll
+E:\Visual Studio saves\BATTLESHIP_GAME\The-Battle-Ship-master\BattleShip.UI\bin\Debug\BattleShip.BLL.pdb
+E:\Visual Studio saves\BATTLESHIP_GAME\The-Battle-Ship-master\BattleShip.UI\obj\Debug\BattleShip.UI.csprojAssemblyReference.cache
+E:\Visual Studio saves\BATTLESHIP_GAME\The-Battle-Ship-master\BattleShip.UI\obj\Debug\BattleShip.UI.csproj.CoreCompileInputs.cache
+E:\Visual Studio saves\BATTLESHIP_GAME\The-Battle-Ship-master\BattleShip.UI\obj\Debug\BattleShip.UI.csproj.CopyComplete
+E:\Visual Studio saves\BATTLESHIP_GAME\The-Battle-Ship-master\BattleShip.UI\obj\Debug\BattleShip.UI.exe
+E:\Visual Studio saves\BATTLESHIP_GAME\The-Battle-Ship-master\BattleShip.UI\obj\Debug\BattleShip.UI.pdb
